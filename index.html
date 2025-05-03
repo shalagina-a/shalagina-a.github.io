@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <script src="js/main.js"></script> 
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header" class="header">
+        <div class="container">
+            <img src="img/logo.png" width=60  alt="logo" class="logo"/>
+            <div class="offer">
+                <div class="offer_text">   
+                    <h1 class="title" id="title">С помощью нас </br>
+                        вы сможете сделать то, о чем</h1>
+                    <h1 class="title_span">желаете!</h1>
+                    <p class="header_text">Наши возможности + опыт позволят вам достичь
+                    огромного успеха. Мы верим в вас! И знаем это на
+                    все 100%. Вас не остановить!</p></br>
+                    <button type="submit" class="btn" id="btn1" onclick="changeColor(this)">Узнать больше...</button>
+                </div>
+                <img src="img/header-img.png" class="phone_pic" alt="picture"/>
+            </div>  
+        </div>
+    </header>
+
+    <div class = "second_page">
+        <div class="container">
+            <h1 class="title" id="title">Что Вам необходимо?</h1></br>
+
+            <div class = "blocks">
+                <div class = "block_single">
+                    <img src="img/f3.png" height=40 alt="first block"/>
+                    <h1 class="block_name">Первый блок</h1>
+                    <p class="block_disc">Lorem, ipsum dolor sit amet consectetur</br> adipiscing elit</p>
+                </div>
+            
+                <div class = "block_single">
+                    <img src="img/f4.png" height=40 alt="second block"/>
+                    <h1 class="block_name">Второй блок</h1>
+                    <p class="block_disc">Lorem ipsum dolor, sit amet consectetur</br> adipiscing elit?</p>
+                </div>
+
+                <div class = "block_single">
+                    <img src="img/f5.png" height=40 alt="third block"/>
+                    <h1 class="block_name">Третий блок</h1>
+                    <p class="block_disc">Lorem, ipsum dolor sit amet consectetur</br> adipiscing elit!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form"> 
+        <h1 class="title" id="title">Форма заказа услуги</h1></br>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            
+            <div>
+                <P>Имя</P>
+                <INPUT TYPE="text" class="input" id="name" name="name" required onblur="checkName()"></br>
+            </div>
+
+            <P>Фамилия</P>
+            <div>
+                <INPUT TYPE="text" class="input" id="surname" name="surname" required onblur="checkSurname()"></br>
+            </div>
+
+            <P>Телефон</P>
+            <div>
+                <INPUT TYPE="tel" class="input" id="tel" name="tel" required onblur="checkTel()"></br>
+            </div>
+
+            <P>Дата</P>
+            <div>
+                <INPUT TYPE="date" class="input" id="date" name="date" required onblur="checkDate()"></br>
+            </div>
+            
+            <P>Время</P>
+            <div>
+                <INPUT TYPE="time" class="input" id="time" name="time"required onblur="checkTime()"></br>
+            </div>
+            
+            <button type="submit" class="form_btn" onclick="OrderSummary();" id="btn2">Отправить заказ</button>
+        </form>
+    </div>
+
+
+    <div class="form"> 
+        <h1 class="title" id="title">Форма заказа обратного звонка</h1></br>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <INPUT TYPE="text" class="input" placeholder="Имя" required maxlength="20" pattern="[A-Za-zА-Яа-яЁё]" ></br>
+            <INPUT TYPE="email" class="input" placeholder="Введите свой E-mail" required pattern="^\S+@\S+\.\S+$" id="email"></br>
+            <INPUT TYPE="tel" class="input" placeholder="Телефон" required maxlength="12" pattern="^\+7[1-9]{10}$" id="tel2"></br>
+            <INPUT TYPE="text" class="input" placeholder="Какая тема Вас интересует?" required pattern="[A-Za-zА-Яа-яЁё]" id="theme"></br>
+            <button type="submit" class="form_btn" id="btn3">Отправить вопрос!</button>
+        </form>
+    </div>
+
+    <footer class="copyright"> 
+        
+        <h1 class="title" id="copyright" onmouseover="transparent(this)" onmouseout="removeTransparent(this)"> © Все на этом сайте защищено</h1>
+
+    </footer>
+
+</body>
+</html>
